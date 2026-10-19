@@ -3,24 +3,24 @@
 class EnvrouterCli < Formula
   desc "Routes each coding agent to the right account and MCP servers by folder"
   homepage "https://github.com/pixel-perfect-software/env-router"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/pixel-perfect-software/env-router/releases/download/v#{version}/envrouter-cli-#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "d6473f26ad04e4baa1bdb79e3ce0d85a00156be8de99985b955c90a32811c5e6"
+      sha256 "6111231989720a824f430d249e6ba74a2171fd370df436da503ac420ca217e5e"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/pixel-perfect-software/env-router/releases/download/v#{version}/envrouter-cli-#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "354e9d54f55d9f070a769f388c056e64d36a3033d9b980f85fcf74e9419a3e41"
+      sha256 "516a3383df4c98db99993391514c6d38c310de0a0d5a9fd1ce8d4200e1f1dcdd"
     end
     on_arm do
       url "https://github.com/pixel-perfect-software/env-router/releases/download/v#{version}/envrouter-cli-#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "86b03e25f93daca87de87d5ffe425c5dbd8d5b9d76c719f5f68e212279eedd23"
+      sha256 "a1a53a812e518604683fd89550a3cdf09e082b46c7e5a1f7990318c7b3fd230d"
     end
   end
 
@@ -36,7 +36,8 @@ class EnvrouterCli < Formula
       Install the shim and helpers into ~/.envrouter, then turn routing on in your shell:
         envrouter install
         envrouter shell on zsh    # or bash, fish
-      After upgrading, run `envrouter install` again.
+      After upgrading, run `envrouter install` again. On a Mac with the EnvRouter app,
+      skip `envrouter install`: the app keeps ~/.envrouter/bin current itself.
     EOS
   end
 
