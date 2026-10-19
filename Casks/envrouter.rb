@@ -3,7 +3,7 @@
 # Don't edit those two lines by hand.
 cask "envrouter" do
   version "0.1.0"
-  sha256 :no_check
+  sha256 "3ccd911b72eeaf4185b71bd112d23882ddec1f897cdfd75ca923602d33250844"
 
   url "https://github.com/pixel-perfect-software/env-router/releases/download/v#{version}/EnvRouter-#{version}-arm64.zip"
   name "EnvRouter"
