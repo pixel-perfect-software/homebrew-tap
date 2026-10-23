@@ -3,24 +3,24 @@
 class EnvrouterCli < Formula
   desc "Routes each coding agent to the right account and MCP servers by folder"
   homepage "https://github.com/pixel-perfect-software/env-router"
-  version "0.6.0"
+  version "0.7.0"
   license "GPL-3.0-or-later"
 
   on_macos do
     on_arm do
       url "https://github.com/pixel-perfect-software/env-router/releases/download/v#{version}/envrouter-cli-#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "ffe3b35ab29774b852198e04af58c9750a8376e3c69a73f2157f0f8b7aed7334"
+      sha256 "9be7d2ac1a279038d471bc4d7b2f5f3c13c1f61c9e557f56b1e8108f8e0c7fee"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/pixel-perfect-software/env-router/releases/download/v#{version}/envrouter-cli-#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "f56bf46b03c62daca67b5d0d2e5f25ce53799a00fe41f99daec2505314c98b59"
+      sha256 "20c0b82d59f6ecbdd944d294c7677e8aaf55cf78d625089ae22e9c4c78e59174"
     end
     on_arm do
       url "https://github.com/pixel-perfect-software/env-router/releases/download/v#{version}/envrouter-cli-#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "8cde1f952a7d623d3d40025a54240f3315bb29af9bb0af3a8b0d63ec881aa037"
+      sha256 "f8d97f17caf791520265e1178ef1831b1805c88b5160834ad1a2e608b295cae8"
     end
   end
 
