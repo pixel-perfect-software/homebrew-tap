@@ -3,24 +3,30 @@
 class EnvrouterCli < Formula
   desc "Routes each coding agent to the right account and MCP servers by folder"
   homepage "https://github.com/pixel-perfect-software/env-router"
-  version "0.7.1"
   license "GPL-3.0-or-later"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   on_macos do
+    # There's no Intel macOS build yet, so an Intel Mac is told so rather than given no URL.
+    depends_on arch: :arm64
     on_arm do
-      url "https://github.com/pixel-perfect-software/env-router/releases/download/v#{version}/envrouter-cli-#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "067cac489a61c4387336f4136aa4612be791546b3d0abb874d4e733da83b467e"
+      url "https://github.com/pixel-perfect-software/env-router/releases/download/v0.7.2/envrouter-cli-0.7.2-aarch64-apple-darwin.tar.gz"
+      sha256 "deab24146e470007cca565e7009e5cecc82ecb4107ab21bf7b5109fdfeb50e07"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/pixel-perfect-software/env-router/releases/download/v#{version}/envrouter-cli-#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "0ee713a9243911c1722fee05f550f1b9cd047b41ab7589098ecdcbf8c93b07c6"
+      url "https://github.com/pixel-perfect-software/env-router/releases/download/v0.7.2/envrouter-cli-0.7.2-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "0b2b66e5be989560627734a133bf4e785c05a152b20a8791758d071303ac689f"
     end
     on_arm do
-      url "https://github.com/pixel-perfect-software/env-router/releases/download/v#{version}/envrouter-cli-#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "1f6168689052c672c549b5e4baad70b1204030674a002f077110f339060b95df"
+      url "https://github.com/pixel-perfect-software/env-router/releases/download/v0.7.2/envrouter-cli-0.7.2-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "4a961cdf99823f1e18ada5a4f451aa32b5ffc1c2d37ab2ec67d44fe2954d851c"
     end
   end
 
