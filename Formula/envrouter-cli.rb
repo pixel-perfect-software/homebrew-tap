@@ -14,19 +14,19 @@ class EnvrouterCli < Formula
     # There's no Intel macOS build yet, so an Intel Mac is told so rather than given no URL.
     depends_on arch: :arm64
     on_arm do
-      url "https://github.com/pixel-perfect-software/env-router/releases/download/v0.7.2/envrouter-cli-0.7.2-aarch64-apple-darwin.tar.gz"
-      sha256 "deab24146e470007cca565e7009e5cecc82ecb4107ab21bf7b5109fdfeb50e07"
+      url "https://github.com/pixel-perfect-software/env-router/releases/download/v0.8.0/envrouter-cli-0.8.0-aarch64-apple-darwin.tar.gz"
+      sha256 "fcb8abd6cd04b8d7e4f56bd238f725a4a238645665c34f704353e70097b2a117"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/pixel-perfect-software/env-router/releases/download/v0.7.2/envrouter-cli-0.7.2-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "0b2b66e5be989560627734a133bf4e785c05a152b20a8791758d071303ac689f"
+      url "https://github.com/pixel-perfect-software/env-router/releases/download/v0.8.0/envrouter-cli-0.8.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "64e3857cf8a888d16e81ff4c4943804efbf2c3b18f2f57f0ddba75aa85ae09a5"
     end
     on_arm do
-      url "https://github.com/pixel-perfect-software/env-router/releases/download/v0.7.2/envrouter-cli-0.7.2-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "4a961cdf99823f1e18ada5a4f451aa32b5ffc1c2d37ab2ec67d44fe2954d851c"
+      url "https://github.com/pixel-perfect-software/env-router/releases/download/v0.8.0/envrouter-cli-0.8.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "499a1f5b79f4314643eb7c0c63f40e18e3ea263ea7495cf326a9ea9eb5b62e0c"
     end
   end
 
@@ -44,6 +44,8 @@ class EnvrouterCli < Formula
         envrouter shell on zsh    # or bash, fish
       After upgrading, run `envrouter install` again. On a Mac with the EnvRouter app,
       skip `envrouter install`: the app keeps ~/.envrouter/bin current itself.
+      To remove everything, quit the EnvRouter app if it's open and run `envrouter uninstall` (it
+      turns routing off, deletes the MCP secrets and ~/.envrouter), then `brew uninstall envrouter-cli`.
     EOS
   end
 
