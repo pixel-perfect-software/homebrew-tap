@@ -14,19 +14,19 @@ class EnvrouterCli < Formula
     # There's no Intel macOS build yet, so an Intel Mac is told so rather than given no URL.
     depends_on arch: :arm64
     on_arm do
-      url "https://github.com/pixel-perfect-software/env-router/releases/download/v0.8.0/envrouter-cli-0.8.0-aarch64-apple-darwin.tar.gz"
-      sha256 "fcb8abd6cd04b8d7e4f56bd238f725a4a238645665c34f704353e70097b2a117"
+      url "https://github.com/pixel-perfect-software/env-router/releases/download/v0.9.0/envrouter-cli-0.9.0-aarch64-apple-darwin.tar.gz"
+      sha256 "fe8b7f8accb814768cb28ea7b790913a983b11192c3dfc930ab4485ddec5d1f3"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/pixel-perfect-software/env-router/releases/download/v0.8.0/envrouter-cli-0.8.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "64e3857cf8a888d16e81ff4c4943804efbf2c3b18f2f57f0ddba75aa85ae09a5"
+      url "https://github.com/pixel-perfect-software/env-router/releases/download/v0.9.0/envrouter-cli-0.9.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "139c72cbe1dbea32dc17ad0806a20548b1e668cd00ed14b6094c323032b563c4"
     end
     on_arm do
-      url "https://github.com/pixel-perfect-software/env-router/releases/download/v0.8.0/envrouter-cli-0.8.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "499a1f5b79f4314643eb7c0c63f40e18e3ea263ea7495cf326a9ea9eb5b62e0c"
+      url "https://github.com/pixel-perfect-software/env-router/releases/download/v0.9.0/envrouter-cli-0.9.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "989559207d506e56036fa74b0fee0c8504d4a0243362594edd928dbd2afcddd8"
     end
   end
 
